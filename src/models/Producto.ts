@@ -1,13 +1,6 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../src/db";
-
-export const Producto = sequelize.define("Producto", {
-  nombre: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  precio: {
-    type: DataTypes.FLOAT,
-    allowNull: false,
-  },
-});
+export interface Producto {
+  id?: number;       // opcional si se genera automáticamente
+  nombre: string;
+  precio: number;
+  stock: number;
+}
